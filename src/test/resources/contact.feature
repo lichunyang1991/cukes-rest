@@ -5,10 +5,8 @@ Feature: test crmlogic contact module
     
   Scenario: add contact with required param Name 
     #And let variable "cookieValue" equal to file value
-    And let variable "name" equal to "Hello"
+    And let variable "name" equal to "lichunyangtest"
     Given request body "{"CustomerID":"","UDFieldDatas":[{"FieldName":"Name","FieldProperty":1,"FieldType":2,"FieldValue":{"Value":"{(name)}"}}],"Type":1,"AssociateCustomerByCompany":false}"
-    #And content type is "application/json"
-    #And cookie name "FSAuthX" with value "{(cookieValue)}"  
     When the client performs POST request on /FHH/EM1HCRM/Contact/AddContact
     Then response value is 
     Then status code is 200

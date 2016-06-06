@@ -21,8 +21,8 @@ import util.WebLogin;
 @RunWith(Cucumber.class)
 @CucumberOptions(
     //format = { "junit:reports/junit/junit.xml", "html:reports/html", "pretty"},
-	plugin = {"pretty", "html:target/cucumber","json:target/cucumber.json"},
-    features = "classpath:hj.feature",//运行test/resources下面的所有文件
+//	plugin = {"pretty", "html:target/cucumber","json:target/cucumber.json"},
+ //   features = "classpath:hj.feature",//运行test/resources下面的所有文件
 //    features = "classpath:contact4Web.feature",//指定运行某个feature
     glue = "lv.ctco.cukesrest.api",
     strict = true
