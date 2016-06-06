@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="13" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="13" time="1.08308">
+<testcase classname="test crmlogic contact module" name="add contact with required param Name" time="0.117419">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:13)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+And let variable "name" equal to "AndroidContact"...........................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+Given Android request body "{"M1":"","M2":[{"M1":"Name","M4":1,"M2":2,"M3":{"M1":"{(name)}"}}],"M3":1,"M7":false}".passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/AddContact/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+Then mobile response contains "M1"..........................................skipped
+Then let variable "ContactId" equal to mobile jsonPath "M1.M1" value........skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:13)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="query contact info after add" time="0.077252">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:24)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+Given Android request body "{"M1":"{(ContactId)}"}".........................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/GetContactInfo/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+Then mobile response contains property "M1.M1" containing String content "{(ContactId)}".skipped
+Then mobile response contains property "M1.M4" containing String content "{(name)}".skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:24)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="query GetAllContactListForMobile after add" time="0.092392">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:36)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+Given Android request body "{"M1":1458288496096}"...........................passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/GetAllContactListForMobile/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+Then mobile response contains "{(ContactId)}"...............................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:36)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="query GetContactWorkPageList after add" time="0.073927">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:47)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+Given Android request body "{"M3":"{(name)}","M2":0,"M5":2,"M1":20}"........passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/GetContactWorkPageList/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+Then mobile response contains "{(name)}"....................................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:47)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="add contact with required param Name and other value" time="0.086717">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:59)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+And let variable "newName" equal to "ContIntroducer"........................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+Given Android request body "{"M1":"","M2":[{"M1":"Name","M4":1,"M2":2,"M3":{"M1":"{(newName)}","M2":null,"M3":null}},{"M1":"Introducer","M2":2,"M3":{"M1":"{(ContactId)}","M2":null,"M3":null},"M4":0}],"M3":1,"M7":false}".passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/AddContact/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+Then mobile response contains "{(newName)}".................................skipped
+Then mobile response contains "{(ContactId)}"...............................skipped
+Then let variable "IntroducerId" equal to mobile jsonPath "M1.M1" value.....skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:59)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="GetContactIntroducerList" time="0.084572">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:71)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+Given Android request body "{"M4":"{(NewContactId)}","M3":0,"M2":10,"M1":""}".passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/GetContactIntroducerList/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:71)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="delete contact just added" time="0.075801">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:81)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+Given Android request body "{"M1":"{(IntroducerId)}"}"......................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/DeleteContact/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:81)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="update contact info after add" time="0.081619">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:93)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+And let variable "updateName" equal to "HelloAndroid".......................passed
+And let variable "telNum" equal to "18900001234"............................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+Given Android request body "{"M2":[{"M4":1,"M3":{"M1":"{(updateName)}","M2":null,"M3":null},"M1":"Name","M2":2},{"M4":1,"M3":{"M1":"{(telNum)}","M2":null,"M3":null},"M1":"Tel","M2":2}],"M1":"{(ContactId)}"}".passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/UpdateContact/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:93)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="query contact info after update" time="0.079957">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:104)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+Given Android request body "{"M1":"{(ContactId)}"}".........................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/GetContactInfo/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+Then mobile response contains property "M1.M1" containing String content "{(ContactId)}".skipped
+Then mobile response contains property "M1.M4" containing String content "{(updateName)}".skipped
+Then mobile response contains property "M1.M13" containing String content "{(telNum)}".skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:104)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="query GetContactWorkPageList after add" time="0.080957">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:117)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+Given Android request body "{"M3":"{(updateName)}","M2":0,"M5":2,"M1":20}"..passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/GetContactWorkPageList/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+Then mobile response contains "{(updateName)}"..............................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:117)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="delete contact just added" time="0.081144">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:127)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+Given Android request body "{"M1":"{(ContactId)}"}".........................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/DeleteContact/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:127)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="query contact info after delete" time="0.076131">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:138)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+Given Android request body "{"M1":"{(ContactId)}"}".........................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/GetContactInfo/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "6".skipped
+Then mobile response xml body contains property "Msg" containing String content "联系人已删除或已更换负责人".skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:138)
+]]></failure>
+</testcase>
+<testcase classname="test crmlogic contact module" name="query GetContactWorkPageList after delete" time="0.075192">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)&#13;&#10;&#9;at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)&#13;&#10;&#9;at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)&#13;&#10;&#9;at ✽.Then status code is 200(contact4Android.feature:149)&#13;&#10;"><![CDATA[Given baseUri is https://www.fsceshi.com....................................passed
+And content type is "text/xml; charset=UTF-8"...............................passed
+Given Android request body "{"M3":"{(updateName)}","M2":0,"M5":2,"M1":20}"..passed
+When the client performs POST request on https://www.fsceshi.com/FHE/EM1ACRM/Contact/GetContactWorkPageList/Android.100028288.passed
+Then response value is......................................................passed
+Then status code is 200.....................................................failed
+Then mobile response xml body contains property "Status" containing String content "0".skipped
+Then mobile response not contains "{(updateName)}"..........................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at lv.ctco.cukesrest.internal.AssertionFacadeImpl.statusCodeIs(AssertionFacadeImpl.java:78)
+	at lv.ctco.cukesrest.internal.switches.SwitchedByInterceptor.invoke(SwitchedByInterceptor.java:31)
+	at lv.ctco.cukesrest.internal.context.InflateContextInterceptor.invoke(InflateContextInterceptor.java:30)
+	at lv.ctco.cukesrest.api.ThenSteps.response_Status_Code_Is(ThenSteps.java:144)
+	at ✽.Then status code is 200(contact4Android.feature:149)
+]]></failure>
+</testcase>
+</testsuite>

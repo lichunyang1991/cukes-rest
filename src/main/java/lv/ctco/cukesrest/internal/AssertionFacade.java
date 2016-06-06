@@ -1,0 +1,73 @@
+package lv.ctco.cukesrest.internal;
+
+public interface AssertionFacade {
+    String ASSERTION_FACADE = "AssertionFacade";
+
+    void bodyEqualTo(String body);
+
+    void bodyNotEqualTo(String body);
+
+    void bodyNotEmpty();
+
+    void bodyContains(String body);
+    
+    void mobileBodyContains(String body);
+    
+    void mobileBodyNotContains(String body);
+
+    void bodyDoesNotContain(String body);
+
+    void headerIsEmpty(String headerName);
+
+    void headerIsNotEmpty(String headerName);
+
+    void statusCodeIs(int statusCode);
+
+    void statusCodeIsNot(int statusCode);
+
+    void headerEndsWith(String headerName, String suffix);
+
+    void varAssignedFromHeader(String varName, String headerName);
+
+    void headerEqualTo(String headerName, String value);
+
+    void headerNotEqualTo(String headerName, String value);
+
+    void headerContains(String headerName, String text);
+
+    void headerDoesNotContain(String headerName, String text);
+
+    void bodyContainsPropertiesFromJson(String json);
+
+    void bodyContainsPathWithValue(String path, String value);
+
+    void bodyContainsPathWithOtherValue(String path, String value);
+
+    void bodyDoesNotContainPath(String path);
+
+    void bodyContainsArrayWithSize(String path, String size);
+
+    void bodyContainsPathOfType(String path, String type);
+
+    void bodyContainsPathMatchingPattern(String path, String pattern);
+
+    void bodyContainsPathNotMatchingPattern(String path, String pattern);
+
+    void varAssignedFromProperty(String varName, String property);
+
+    void varAssignedFromJsonPath(String varName, String property);
+    
+    void varAssignedFromMobileJsonPath(String varName, String property);
+
+    void bodyContainsJsonPathValueContainingPhrase(String jsonPath, String phrase);
+    
+    void bodyContainsJsonPathValueContainingIntegerContent(String jsonPath, int value);
+    
+    void mobileBodyContainsJsonPathValueContainingStringContent(String jsonPath, String value);
+    
+    void mobileXMLBodyContainsElementKeyValueContainingStringContent(String key, String value);
+    
+    String getResponseContent();
+    
+    String getResponseContentType();
+}

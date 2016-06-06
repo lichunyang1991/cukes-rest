@@ -1,0 +1,45 @@
+{
+    "From": 2,
+    "UDFieldDatas": [
+        {
+            "FieldName": "Source",
+            "FieldProperty": 1,
+            "FieldType": 8,
+            "FieldValue": {
+                "Value": "2"
+            }
+        },
+        {
+            "FieldName": "UDSSel1",
+            "FieldProperty": 2,
+            "FieldType": 8,
+            "FieldValue": {
+                "Value": "2"
+            }
+        },
+        {
+            "FieldName": "UDDate3",
+            "FieldProperty": 2,
+            "FieldType": 7,
+            "FieldValue": {
+                "Value": 1463587200000
+            }
+        },
+        {
+            "FieldName": "Name",
+            "FieldProperty": 1,
+            "FieldType": 2,
+            "FieldValue": {
+                "Value": "test关联客户4"
+            }
+        },
+        {
+            "FieldName": "UDInt5",
+            "FieldProperty": 2,
+            "FieldType": 4,
+            "FieldValue": {
+                "Value": "1000"
+            }
+        }
+    ]
+}

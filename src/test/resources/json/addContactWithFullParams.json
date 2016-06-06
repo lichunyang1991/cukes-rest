@@ -1,0 +1,179 @@
+{
+    "CustomerID": "",
+    "UDFieldDatas": [
+        {
+            "FieldName": "IsKeyPerson",
+            "FieldProperty": 1,
+            "FieldType": 8,
+            "FieldValue": {
+                "Value": "2"
+            }
+        },
+        {
+            "FieldName": "BirthDay",
+            "FieldProperty": 1,
+            "FieldType": 12,
+            "FieldValue": {
+                "Value": "2001-12-02"
+            }
+        },
+        {
+            "FieldName": "Gender",
+            "FieldProperty": 1,
+            "FieldType": 8,
+            "FieldValue": {
+                "Value": "2"
+            }
+        },
+        {
+            "FieldName": "UDSSel1",
+            "FieldProperty": 2,
+            "FieldType": 8,
+            "FieldValue": {
+                "Value": "1"
+            }
+        },
+        {
+            "FieldName": "UDMSel1",
+            "FieldProperty": 2,
+            "FieldType": 9,
+            "FieldValue": {
+                "Values": [
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        {
+            "FieldName": "UDCSSel1",
+            "FieldProperty": 2,
+            "FieldType": 14,
+            "FieldValue": {
+                "Value": "2"
+            }
+        },
+        {
+            "FieldName": "UDDate1",
+            "FieldProperty": 2,
+            "FieldType": 7,
+            "FieldValue": {
+                "Value": 1464019200000
+            }
+        },
+        {
+            "FieldName": "Mobile",
+            "FieldProperty": 1,
+            "FieldType": 2,
+            "FieldValue": {
+                "Value": "18900001234"
+            }
+        },
+        {
+            "FieldName": "Tel",
+            "FieldProperty": 1,
+            "FieldType": 2,
+            "FieldValue": {
+                "Value": "010-99887766"
+            }
+        },
+        {
+            "FieldName": "Name",
+            "FieldProperty": 1,
+            "FieldType": 2,
+            "FieldValue": {
+                "Value": "ContactWithFullParams"
+            }
+        },
+        {
+            "FieldName": "Company",
+            "FieldProperty": 1,
+            "FieldType": 2,
+            "FieldValue": {
+                "Value": "Company公司"
+            }
+        },
+        {
+            "FieldName": "Department",
+            "FieldProperty": 1,
+            "FieldType": 2,
+            "FieldValue": {
+                "Value": "Department部门"
+            }
+        },
+        {
+            "FieldName": "Post",
+            "FieldProperty": 1,
+            "FieldType": 2,
+            "FieldValue": {
+                "Value": "Post职务"
+            }
+        },
+        {
+            "FieldName": "Email",
+            "FieldProperty": 1,
+            "FieldType": 2,
+            "FieldValue": {
+                "Value": "aa@qq.com"
+            }
+        },
+        {
+            "FieldName": "Address",
+            "FieldProperty": 1,
+            "FieldType": 2,
+            "FieldValue": {
+                "Value": "address地址"
+            }
+        },
+        {
+            "FieldName": "Remark",
+            "FieldProperty": 1,
+            "FieldType": 3,
+            "FieldValue": {
+                "Value": "备注comment"
+            }
+        },
+        {
+            "FieldName": "UDSText1",
+            "FieldProperty": 2,
+            "FieldType": 2,
+            "FieldValue": {
+                "Value": "单行文本"
+            }
+        },
+        {
+            "FieldName": "UDMText1",
+            "FieldProperty": 2,
+            "FieldType": 3,
+            "FieldValue": {
+                "Value": "多行文本\n多行文本\nmultiple lines"
+            }
+        },
+        {
+            "FieldName": "UDInt1",
+            "FieldProperty": 2,
+            "FieldType": 4,
+            "FieldValue": {
+                "Value": "1000"
+            }
+        },
+        {
+            "FieldName": "UDDec1",
+            "FieldProperty": 2,
+            "FieldType": 5,
+            "FieldValue": {
+                "Value": "0.50"
+            }
+        },
+        {
+            "FieldName": "UDMoney1",
+            "FieldProperty": 2,
+            "FieldType": 6,
+            "FieldValue": {
+                "Value": 1000.05
+            }
+        }
+    ],
+    "Type": 1,
+    "AssociateCustomerByCompany": false
+}
