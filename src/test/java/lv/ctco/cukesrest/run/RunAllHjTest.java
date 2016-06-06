@@ -1,4 +1,4 @@
-package lv.ctco.cukesrest.run;
+/*package lv.ctco.cukesrest.run;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -9,7 +9,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import util.WebLogin;
 
-/*@RunWith(Suite.class)
+@RunWith(Suite.class)
 @SuiteClasses({
 	Contact4WebTest.class,
 	ContactAssociateToCustomer4WebTest.class,
@@ -17,7 +17,7 @@ import util.WebLogin;
 	Contact4AndroidTest.class,
 	ContactAssociateToCustomer4AndroidTest.class
 	
-  })*/
+  })
 @RunWith(Cucumber.class)
 @CucumberOptions(
     //format = { "junit:reports/junit/junit.xml", "html:reports/html", "pretty"},
@@ -41,3 +41,4 @@ public class RunAllHjTest {
 	 }
 
 }
+*/

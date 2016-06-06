@@ -1,4 +1,4 @@
-package lv.ctco.cukesrest.run;
+/*package lv.ctco.cukesrest.run;
 
 import org.junit.runner.RunWith;
 
@@ -18,4 +18,4 @@ public class LoginTest {
 //    public static void setUp() throws Exception {
 //        new SampleApplication().run(new String[]{"server", "server.yml"});
 //    }
-}
+}*/

@@ -1,7 +1,7 @@
 Feature: test crmlogic contact module
 
   Background:
-    Given baseUri is https://www.fsceshi.com
+    Given baseUri is http://www.fsceshi.com
     
   Scenario: add contact with required param Name 
     #And let variable "cookieValue" equal to file value
